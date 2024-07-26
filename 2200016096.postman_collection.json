@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "c2eaf10f-6fc8-4a8f-bfc5-0a632aba4f31",
+		"name": "2200016096",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36583903"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n  { \"NIM\": 345678, \"username\": \"admin\", \"password\" : \"admin\" }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/auth/register",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\", \"password\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/auth/login",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post buku",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjIwMDY0OTcsImV4cCI6MTcyMjAxMDA5N30.CjjlGSIjxLdN8wRsGfiJ2Nd-geLfdc7X1HOa5nP_fQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"judul\": \"React Up & Running\", \"penulis\": \"Stoyan Stefanov\", \"penerbit\": \"TechPress\", \"sinopsis\": \"A hands-on guide to React development.\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get buku",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up buku",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjIwMDY0OTcsImV4cCI6MTcyMjAxMDA5N30.CjjlGSIjxLdN8wRsGfiJ2Nd-geLfdc7X1HOa5nP_fQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"judul\": \"JavaScript for Beginners\", \"penulis\": \"John Doe\", \"penerbit\": \"TechBooks\", \"sinopsis\": \"A comprehensive guide to JavaScript.\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku/1:bukuID",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku",
+						"1:bukuID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del buku",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjIwMDY0OTcsImV4cCI6MTcyMjAxMDA5N30.CjjlGSIjxLdN8wRsGfiJ2Nd-geLfdc7X1HOa5nP_fQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app//buku/1:bukuID",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"buku",
+						"1:bukuID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post pinjam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"NIM\": 456789, \"bukuID\": 4, \"tgl_pjm\": \"2024-07-04T00:00:00.000Z\", \"tgl_hrs_kbl\": \"2024-08-03T00:00:00.000Z\", \"kembali\": \"belum\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku/pinjam",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku",
+						"pinjam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get pinjam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku/pinjam",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku",
+						"pinjam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up pinjam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjIwMDY0OTcsImV4cCI6MTcyMjAxMDA5N30.CjjlGSIjxLdN8wRsGfiJ2Nd-geLfdc7X1HOa5nP_fQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tgl_pjm\" : \"2024-07-26T13:29:17.000\", \"tgl_kbl\": \"2024-07-26T13:29:17.000\", \"tgl_hrs_kbl\" : \"2024-07-26T13:29:17.000\", \"kembali\" : \"belum\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku/pinjam/123456:NIM/2:bukuID",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku",
+						"pinjam",
+						"123456:NIM",
+						"2:bukuID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del pinjam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjIwMDY0OTcsImV4cCI6MTcyMjAxMDA5N30.CjjlGSIjxLdN8wRsGfiJ2Nd-geLfdc7X1HOa5nP_fQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku/pinjam/123456:NIM/2:bukuID",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku",
+						"pinjam",
+						"123456:NIM",
+						"2:bukuID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post kembali",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE5OTk5ODcsImV4cCI6MTcyMjAwMzU4N30.d2-ZdLvjcUq0049zRLsZaw-3y967T7dNa1rSBX1mxGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NIM\" : 234567, \"bukuID\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku/kembali",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku",
+						"kembali"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get kembali",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE5OTk5ODcsImV4cCI6MTcyMjAwMzU4N30.d2-ZdLvjcUq0049zRLsZaw-3y967T7dNa1rSBX1mxGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku/kembali",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku",
+						"kembali"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up kembali",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjIwMDY0OTcsImV4cCI6MTcyMjAxMDA5N30.CjjlGSIjxLdN8wRsGfiJ2Nd-geLfdc7X1HOa5nP_fQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tgl_kbl\" : \"2024-07-26T13:47:25.000Z\", \"pinalti\" : \"tidak\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku/kembali/234567:NIM/2:bukuID",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku",
+						"kembali",
+						"234567:NIM",
+						"2:bukuID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del kembali",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjIwMDY0OTcsImV4cCI6MTcyMjAxMDA5N30.CjjlGSIjxLdN8wRsGfiJ2Nd-geLfdc7X1HOa5nP_fQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tgl_kbl\" : \"2024-07-26T13:47:25.000Z\", \"pinalti\" : \"tidak\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/buku/kembali/234567:NIM/2:bukuID",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"buku",
+						"kembali",
+						"234567:NIM",
+						"2:bukuID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get log",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjIwMDY0OTcsImV4cCI6MTcyMjAxMDA5N30.CjjlGSIjxLdN8wRsGfiJ2Nd-geLfdc7X1HOa5nP_fQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tgl_kbl\" : \"2024-07-26T13:47:25.000Z\", \"pinalti\" : \"tidak\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://perpus-9zngh1txe-saads-projects-cbda4837.vercel.app/log",
+					"protocol": "https",
+					"host": [
+						"perpus-9zngh1txe-saads-projects-cbda4837",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"log"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
