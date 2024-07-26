@@ -17,6 +17,7 @@ router.get('/', async (req, res, next) => {
     }
 });
 
+//hanya admin yang dapat menambah buku
 router.post('/',authenticate, authorize(['admin']), async (req, res, next) => {
     try {
         const { judul, penulis, penerbit, sinopsis } = req.body;
@@ -27,6 +28,7 @@ router.post('/',authenticate, authorize(['admin']), async (req, res, next) => {
     }
 });
 
+//hanya admin yang dapat update buku
 router.put('/:bukuID', authenticate, authorize(['admin']), async (req, res, next) => {
     try {
         const { judul, penulis, penerbit, sinopsis } = req.body;
@@ -46,6 +48,7 @@ router.put('/:bukuID', authenticate, authorize(['admin']), async (req, res, next
         }
    });
 
+//hanya admin yang dapat delete buku
 router.delete('/:bukuID', authenticate, authorize(['admin']), async (req, res, next) => {
     try {
         const Books = await Book.findByPk(req.params.bukuID);
@@ -83,6 +86,7 @@ router.post('/pinjam', async (req, res, next) => {
     }
 });
 
+//hanya admin yang dapat mengupdate peminjaman
 router.put('/pinjam/:NIM/:bukuID', authenticate, authorize(['admin']), async (req, res, next) => {
     try {
         const { NIM, bukuID } = req.params;
@@ -104,6 +108,7 @@ router.put('/pinjam/:NIM/:bukuID', authenticate, authorize(['admin']), async (re
     }
 });
 
+//hanya admin yang dapat mendelete peminjaman
 router.delete('/pinjam/:NIM/:bukuID', authenticate, authorize(['admin']), async (req, res, next) => {
     try {
         const { NIM, bukuID } = req.params;
@@ -161,6 +166,7 @@ router.post('/kembali', async (req, res, next) => {
     }
 });
 
+//hanya admin yang dapat mengupdate pengembalian
 router.put('/kembali/:NIM/:bukuID', authenticate, authorize(['admin']), async (req, res, next) => {
     try {
         const { NIM, bukuID } = req.params;
@@ -180,7 +186,7 @@ router.put('/kembali/:NIM/:bukuID', authenticate, authorize(['admin']), async (r
     }
 });
 
-
+//hanya admin yang dapat menghapus pengembalian
 router.delete('/kembali/:NIM/:bukuID', authenticate, authorize(['admin']), async (req, res, next) => {
     try {
         const { NIM, bukuID } = req.params;
